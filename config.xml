@@ -1,16 +1,20 @@
 <?xml version="1.0"?>
 <config>
+	<id>travel theme 2</id>
 	<type>theme</type>
 	<view>pc</view>
+	<category>portal</category>
 	<name>
 		<en>Travel Design No. 2</en>
 		<ko>여행사 디자인 2번</ko>
 	</name>
 	<version>0.1</version>
+	<author>JaeHo Song</author>
+	<email>thruthesky@gmail.com</email>
 	<demo>http://travel.philgo.net</demo>
 	<short>
-		<en></en>
-		<ko></ko>
+		<en>Travel Theme No. 1</en>
+		<ko>Travel Theme No. 1</ko>
 	</short>
 	<detail>
 		<en></en>
