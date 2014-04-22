@@ -5,7 +5,16 @@
 </div>
 
 <div class='posts-left-1'>
-	<?=latest('x-latest-travel-2-posts', bo_table(1), 14 , 10, 1)?>
+	<?
+		include widget(
+			array(
+				'code'		=> 'x-latest-travel-2-posts',
+				'name'		=> 'x-latest-travel-2-posts',
+				'default_forum_id'	=> bo_table(1),
+				'git'		=> 'https://github.com/x-widget/x-latest-travel-2-posts',
+			)
+		);	
+	?>
 </div>
 
 <div class='banner-left'>

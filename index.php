@@ -7,7 +7,7 @@
 				$banners[] = array(
 					'src' => x::url_file( "banner$i" ),
 					'href' => x::meta( "banner{$i}_url" ),
-					'text' => x::meta( "banner{$i}_text")
+					'text' => x::meta( "banner{$i}_text" )
 				);
 			}
 		}		
@@ -17,7 +17,7 @@
 				if ( $banners ) {
 					$selected = 0;
 					foreach ( $banners as $banner ) {
-					
+
 						if ( ! $selected ++ ) $first_image = 'selected';
 						else $first_image = '';
 						
@@ -27,7 +27,8 @@
 						echo "<a href='$url' target='_blank'><img src='$banner[src]'></a>";
 						echo "<a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
 						echo "<div class='banner-more'><a href='$url' target='_blank'>자세히 &gt;</a></div>";
-						echo "</div>";						
+						echo "</div>";
+
 					}
 				}
 				else {
@@ -35,19 +36,34 @@
 				}
 			?>
 		</div>
+		
 		<div class ='main-content'>
 			<div class='travel_images_with_caption_wrapper'>
-				<?=latest("x-travel_2_images_with_caption", bo_table(2), 6, 20)?>
+				<?//=latest("x-travel_2_images_with_caption", bo_table(2), 6, 20)?>
+				<?
+				include widget(
+					array(
+						'code'		=> 'x-travel_2_images_with_caption',
+						'name'		=> 'x-travel_2_images_with_caption',
+						'default_forum_id'	=> bo_table(1),
+						'git'		=> 'https://github.com/x-widget/x-travel_2_images_with_caption',
+					)
+				);
+				?>
 			</div>
 
 
 			<div class='right-widgets'>
 				<div class='travel_posts_with_image_right'>
 				<?
-					$option = array(
-									'icon' => x::url_theme()."/img/chat_icon2.png"
+					include widget(
+						array(
+							'code'		=> 'x-travel_2_posts_with_image_right',
+							'name'		=> 'x-travel_2_posts_with_image_right',
+							'default_forum_id'	=> bo_table(1),
+							'git'		=> 'https://github.com/x-widget/x-travel_2_posts_with_image_right',
+						)
 					);
-					echo latest("x-travel_2_posts_with_image_right", bo_table(3), 3, 50, $cache_time=1, $option );
 				?>
 				</div>
 				<div class='travel_2_timezone'>
@@ -73,7 +89,7 @@
 					}
 					else {?>
 						<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
-				<?}?>
+					<?}?>
 				</div>
 			</div>
 			<div style='clear:both;'></div>
@@ -82,23 +98,38 @@
 		<div class='lower-posts'>
 			<div class='travel_left_posts'>		
 				<?
-					$option = array( 
-									'icon'=> x::url_theme()."/img/folded-paper.png"
-								);
-					echo latest("x-latest-travel-lower-posts", bo_table(4), 4, 20, $cache_time=1, $option );
+					include widget(
+						array(
+							'code'		=> 'x-latest-travel-lower-posts-1',
+							'name'		=> 'x-latest-travel-lower-posts',
+							'default_forum_id'	=> bo_table(1),
+							'git'		=> 'https://github.com/x-widget/x-latest-travel-lower-posts',
+						)
+					);
 				?>
 			</div>
 			<div class='travel_middle_posts'>		
-				<?
-					$option = array( 
-									'icon'=> x::url_theme()."/img/folded-paper.png"
-								);
-				
-					echo latest("x-latest-travel-lower-posts", bo_table(5), 4, 20,  $cache_time=1, $option );
-				?>
+			<?
+				include widget(
+						array(
+							'code'		=> 'x-latest-travel-lower-posts-2',
+							'name'		=> 'x-latest-travel-lower-posts',
+							'default_forum_id'	=> bo_table(1),
+							'git'		=> 'https://github.com/x-widget/x-latest-travel-lower-posts',
+						)
+					);
+			?>
 			</div>
 			<div class='travel_right_posts'>		
-				<?=visit('x-visit-travel')?>
+				<?
+					include widget(
+						array(
+							'code'		=> 'x-visit-travel',
+							'name'		=> 'x-visit-travel',							
+							'git'		=> 'https://github.com/x-widget/x-visit-travel',
+						)
+					);
+				?>
 			</div>
 			
 				<div style='clear:both;'></div>
