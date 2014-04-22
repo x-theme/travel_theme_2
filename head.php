@@ -87,7 +87,15 @@
 </div>
     <div class="left">
 		<div class='login-sidebar'>
-			<?php echo outlogin('x-outlogin-travel_3'); // 외부 로그인  ?>
+		<?php
+			include widget(
+				array(
+					'code'		=> 'login-community-3',
+					'name'		=> 'login-community-3',
+					'git'		=> 'https://github.com/x-widget/login-community-3',
+				)
+			);
+		?>
 		</div> 
 		<?php include x::theme('sidebar_left') ?>
     </div>
