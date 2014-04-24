@@ -8,7 +8,7 @@
 	<?
 		include widget(
 			array(
-				'code'		=> 'x-latest-travel-2-posts',
+				'code'		=> 'x-latest-travel-2-posts-travel_2',
 				'name'		=> 'x-latest-travel-2-posts',
 				'default_forum_id'	=> bo_table(1),
 				'git'		=> 'https://github.com/x-widget/x-latest-travel-2-posts',

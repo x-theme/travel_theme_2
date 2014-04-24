@@ -43,7 +43,7 @@
 				<?
 				include widget(
 					array(
-						'code'		=> 'x-travel_2_images_with_caption',
+						'code'		=> 'x-travel_2_images_with_caption-travel_2',
 						'name'		=> 'x-travel_2_images_with_caption',
 						'default_forum_id'	=> bo_table(1),
 						'git'		=> 'https://github.com/x-widget/x-travel_2_images_with_caption',
@@ -58,7 +58,7 @@
 				<?
 					include widget(
 						array(
-							'code'		=> 'x-travel_2_posts_with_image_right',
+							'code'		=> 'x-travel_2_posts_with_image_right-travel_2',
 							'name'		=> 'x-travel_2_posts_with_image_right',
 							'default_forum_id'	=> bo_table(1),
 							'git'		=> 'https://github.com/x-widget/x-travel_2_posts_with_image_right',
@@ -100,7 +100,7 @@
 				<?
 					include widget(
 						array(
-							'code'		=> 'x-latest-travel-lower-posts-1',
+							'code'		=> 'x-latest-travel-lower-posts-1-travel_2',
 							'name'		=> 'x-latest-travel-lower-posts',
 							'default_forum_id'	=> bo_table(1),
 							'git'		=> 'https://github.com/x-widget/x-latest-travel-lower-posts',
@@ -112,7 +112,7 @@
 			<?
 				include widget(
 						array(
-							'code'		=> 'x-latest-travel-lower-posts-2',
+							'code'		=> 'x-latest-travel-lower-posts-2-travel_2',
 							'name'		=> 'x-latest-travel-lower-posts',
 							'default_forum_id'	=> bo_table(1),
 							'git'		=> 'https://github.com/x-widget/x-latest-travel-lower-posts',
@@ -124,7 +124,7 @@
 				<?
 					include widget(
 						array(
-							'code'		=> 'x-visit-travel',
+							'code'		=> 'x-visit-travel-travel_2',
 							'name'		=> 'x-visit-travel',							
 							'git'		=> 'https://github.com/x-widget/x-visit-travel',
 						)
