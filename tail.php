@@ -3,7 +3,7 @@
 <?	
 	if($_SERVER['SCRIPT_NAME'] == '/index.php') {
 	?>
-	<<div class='foot_banner'>
+	<div class='foot_banner'>
 		<?
 			if( file_exists( x::path_file( "travel_bottom_banner" ) ) ){			
 				if ( !$url = $banner['href'] ) {
