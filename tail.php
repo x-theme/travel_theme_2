@@ -3,9 +3,18 @@
 <?	
 	if($_SERVER['SCRIPT_NAME'] == '/index.php') {
 	?>
-	<div class='foot_banner'>
+	<<div class='foot_banner'>
 		<?
-			if( file_exists( x::path_file( "travel_bottom_banner" ) ) ) $img = "<a href='".meta('travel_bottom_banner_url')."' target='_blank'><img src = '".x::url_file(  "travel_bottom_banner" )."'/></a>";
+			if( file_exists( x::path_file( "travel_bottom_banner" ) ) ){			
+				if ( !$url = $banner['href'] ) {
+					$url = "javascript:void(0);";
+					$target = "";
+				}
+				else {
+					$target = "target='_blank'";
+				}
+			$img = "<a href='$url' $target><img src = '".x::url_file(  "travel_bottom_banner" )."'/></a>";
+			}
 			else {
 				$img = "<a href='javascript:void(0)'><img src='".x::url_theme()."/img/no_bottom_banner.png' /></a>";
 			}

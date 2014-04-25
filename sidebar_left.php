@@ -19,10 +19,16 @@
 
 <div class='banner-left'>
 	<?
-	if ( file_exists( x::path_file ( 'travel_left_banner' ) ) ) {
-		if ( !$url = x::meta('travel_left_banner_url') ) $url = 'javascript:void(0)';
+	if ( file_exists( x::path_file ( 'travel_left_banner' ) ) ) {		
+		if ( !$url = x::meta('travel_left_banner_url') ) {
+			$url = "javascript:void(0);";
+			$target = "";
+		}
+		else {
+			$target = "target='_blank'";
+		}
 		
-		echo "<a href='$url' target='_blank'><img src='".x::url_file('travel_left_banner')."'></a>";
+		echo "<a href='$url' $target><img src='".x::url_file('travel_left_banner')."'></a>";
 	}
 	else {?>
 		<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
